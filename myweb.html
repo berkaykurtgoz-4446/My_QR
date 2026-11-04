@@ -10,186 +10,185 @@
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
 
     body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    font-family: 'Outfit', sans-serif;
-    color: #fff;
-    /* Hareketli Karanlık Degrade Arka Plan */
-    background: linear-gradient(-45deg, #09090b, #181825, #271c35, #0f172a);
-    background-size: 400% 400%;
-    animation: aurora 12s ease infinite;
-    position: relative;
-    overflow-x: hidden;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        font-family: 'Outfit', sans-serif;
+        color: #fff;
+        /* Hareketli Karanlık Degrade Arka Plan */
+        background: linear-gradient(-45deg, #09090b, #181825, #271c35, #0f172a);
+        background-size: 400% 400%;
+        animation: aurora 12s ease infinite;
+        position: relative;
+        overflow-x: hidden;
     }
 
-/* Arka Planda Uçuşan Renkli Işık Küreleri 1 */
+    /* Arka Planda Uçuşan Renkli Işık Küreleri 1 */
     body::before {
-    content: "";
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: float1 8s infinite alternate ease-in-out;
-    z-index: -1;
+        content: "";
+        position: absolute;
+        top: 15%;
+        left: 20%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+        border-radius: 50%;
+        animation: float1 8s infinite alternate ease-in-out;
+        z-index: -1;
     }
 
-/* Arka Planda Uçuşan Renkli Işık Küreleri 2 */
+    /* Arka Planda Uçuşan Renkli Işık Küreleri 2 */
     body::after {
-    content: "";
-    position: absolute;
-    bottom: 15%;
-    right: 20%;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: float2 10s infinite alternate-reverse ease-in-out;
-    z-index: -1;
+        content: "";
+        position: absolute;
+        bottom: 15%;
+        right: 20%;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%);
+        border-radius: 50%;
+        animation: float2 10s infinite alternate-reverse ease-in-out;
+        z-index: -1;
     }
 
-/* Animasyon Çerçeveleri */
+    /* Animasyon Çerçeveleri */
     @keyframes aurora { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
     @keyframes float1 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(60px, 60px) scale(1.2); } }
     @keyframes float2 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-60px, -60px) scale(1.1); } }
 
-/* Nefes Alan Profil Fotoğrafı */
+    /* Nefes Alan Profil Fotoğrafı */
     .profile-img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
-    animation: pulse 3s infinite alternate;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 20px;
+        animation: pulse 3s infinite alternate;
     }
 
     @keyframes pulse { 
-    0% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); transform: scale(1); } 
-    100% { box-shadow: 0 0 40px rgba(56, 189, 248, 0.7); transform: scale(1.02); } 
+        0% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); transform: scale(1); } 
+        100% { box-shadow: 0 0 40px rgba(56, 189, 248, 0.7); transform: scale(1.02); } 
     }
 
-/* Metalik Gradient Başlık */
+    /* Metalik Gradient Başlık */
     .title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    background: linear-gradient(to right, #c084fc, #38bdf8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 1.5px;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        background: linear-gradient(to right, #c084fc, #38bdf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 1.5px;
     }
 
     .link-container {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 1;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 1;
     }
 
-/* 3D Glassmorphism Butonlar */
+    /* 3D Glassmorphism Butonlar */
     .link-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #ffffff;
-    padding: 20px 25px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #ffffff;
+        padding: 20px 25px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-/* Üzerinden Geçen Işık Yansıması (Sweep Shine) */
+    /* Üzerinden Geçen Işık Yansıması (Sweep Shine) */
     .link-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
-    transform: skewX(-25deg);
-    transition: all 0.6s ease;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+        transform: skewX(-25deg);
+        transition: all 0.6s ease;
     }
 
     .link-btn:hover::before {
-    left: 150%;
+        left: 150%;
     }
 
-/* Buton Hover (Üzerine Gelme) Havalanma Efekti */
+    /* Buton Hover (Üzerine Gelme) Havalanma Efekti */
     .link-btn:hover {
-    transform: translateY(-8px) scale(1.02);
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(139, 92, 246, 0.3);
+        transform: translateY(-8px) scale(1.02);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(139, 92, 246, 0.3);
     }
 
     .link-text {
-    flex-grow: 1;
-    text-align: center;
-    padding-right: 35px;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+        flex-grow: 1;
+        text-align: center;
+        padding-right: 35px;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
     }
 
     .link-btn i {
-    font-size: 26px;
-    width: 40px;
-    text-align: center;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-size: 26px;
+        width: 40px;
+        text-align: center;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .link-btn:hover i {
-    transform: scale(1.25) rotate(8deg); /* İkon büyür ve hafifçe eğilir */
+        transform: scale(1.25) rotate(8deg); /* İkon büyür ve hafifçe eğilir */
     }
 
-/* İkonlara Özel Minimalist Parlamalar */
+    /* İkonlara Özel Minimalist Parlamalar */
     .btn-web i { color: #10b981; }
     .btn-ig i { background: -webkit-linear-gradient(45deg, #f59e0b, #ef4444, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .btn-x i { color: #f8fafc; }
     .btn-tt i { color: #f8fafc; text-shadow: 2.5px 2.5px 0px #e11d48, -2.5px -2.5px 0px #06b6d4; }
     .btn-fb i { color: #3b82f6; }   
     </style>
-    <link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap)" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Kendi profil veya şirket logonun linkini buraya ekleyebilirsin -->
-    <img src="c:\Users\user\Downloads\WhatsApp Image 2026-11-04 at 20.03.48.jpeg" alt="MLogo" class="profile-img">
+    <img src="mberkaylogo.jpeg" alt="MuhendisBerkayLogo" class="profile-img">
     
     <div class="title">Hoş Geldiniz</div>
 
     <div class="link-container">
         
         <!-- Instagram -->
-        <a href="[https://www.instagram.com/berkay_4446](https://www.instagram.com/berkay_4446)" target="_blank" class="link-btn btn-ig">
+        <a href="https://www.instagram.com/berkay_4446" target="_blank" class="link-btn btn-ig">
             <i class="fab fa-instagram"></i>
             <span class="link-text">Instagram</span>
         </a>
 
         <!-- X (Twitter) -->
-        <a href="[https://x.com/berkay46328467](https://x.com/berkay46328467)" target="_blank" class="link-btn btn-x">
+        <a href="https://x.com/berkay46328467" target="_blank" class="link-btn btn-x">
             <i class="fa-brands fa-x-twitter"></i>
             <span class="link-text">X (Twitter)</span>
         </a>
 
         <!-- TikTok -->
-        <a href="[https://www.tiktok.com/@berkayhatake1](https://www.tiktok.com/@berkayhatake1)" target="_blank" class="link-btn btn-tt">
+        <a href="https://www.tiktok.com/@berkayhatake1" target="_blank" class="link-btn btn-tt">
             <i class="fab fa-tiktok"></i>
             <span class="link-text">TikTok</span>
         </a>
